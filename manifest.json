@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "SwitchyOmega",
+  "version": "2.5.20",
+  "description": "Manage and switch between multiple proxies quickly & easily.",
+  "icons": {
+    "16": "icons/omega-16.png",
+    "19": "icons/omega-19.png",
+    "24": "icons/omega-24.png",
+    "32": "icons/omega-32.png",
+    "48": "icons/omega-48.png",
+    "64": "icons/omega-64.png",
+    "128": "icons/omega-128.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {
+    "default_icon": {
+      "19": "icons/omega-19.png",
+      "38": "icons/omega-38.png"
+    },
+    "default_title": "SwitchyOmega",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": ["proxy", "storage", "activeTab", "webRequest", "webRequestAuthProvider"],
+  "host_permissions": ["<all_urls>"],
+  "options_page": "options.html",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
